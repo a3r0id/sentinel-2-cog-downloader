@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinel-2-cog-downloader"
+version = "0.1.1"
+description = "Download Sentinel-2 L2A COGs from Element 84 STAC, stitch full bbox coverage, and load selected bands as xarray."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Chad Groom" }]
+requires-python = ">=3.10"
+keywords = [
+    "sentinel-2",
+    "stac",
+    "cog",
+    "xarray",
+    "remote-sensing",
+    "odc-stac",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+dependencies = [
+    "numpy",
+    "odc-stac",
+    "pystac",
+    "pystac-client",
+    "rasterio",
+    "shapely",
+    "xarray",
+]
+
+[project.optional-dependencies]
+dask = ["dask"]
+publish = ["build>=1.2", "twine>=5"]
+dev = ["build>=1.2", "twine>=5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
