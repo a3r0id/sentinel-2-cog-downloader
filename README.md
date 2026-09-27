@@ -1,7 +1,7 @@
 # Sentinel-2 COG Downloader/Loader
 
 Search Element 84 Earth Search for Sentinel-2 L2A Cloud-Optimized GeoTIFFs, stitch every tile needed for **full bounding-box coverage**, keep only the bands you ask for, and return an `xarray` array.
-I know this is a bit niche but I've found myself writing this code multiple times over the years so I'm putting it in a package.
+I know this is a bit niche but I've found myself writing this code multiple times over the years so I'm putting it in a package. View on [PyPi](https://pypi.org/project/sentinel-2-cog-downloader/)
 
 ## Install
 
